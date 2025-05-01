@@ -4,12 +4,14 @@ export default function Aboutme() {
   return (
     <>
       <section className="aboutme">
+        <div className="aboutme-tag">
+          <h2>About me</h2>
+        </div>
         <div className="main">
           <div className="image2">
             <img src={Image} alt="aboutme" />
           </div>
           <div className="about-text">
-            <h2>About me</h2>
             <p>
               Informatics engineering students who are interested in software
               development, have experience in web development while
