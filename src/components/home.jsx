@@ -16,7 +16,7 @@ export default function Home() {
       <section className="section">
         <div className="section__container">
           <div className="content">
-            <h1 className="judul">I'm<span> Wicaksana<br />a</span> student informatic engineering</h1>
+            <h1 className="judul">I'm<span> Wicaksana<br />an</span> Informatic Engineering Student</h1>
             <p className="description">
             I am an 8th semester student in the informatics engineering study program
             </p>
