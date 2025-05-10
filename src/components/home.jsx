@@ -1,12 +1,12 @@
 import React from 'react';
 import Image1 from '../assets/pict1.jpg'
-// import { IoLocationOutline } from "react-icons/io5";
+import { IoLocationOutline } from "react-icons/io5";
 
 export default function Home() {
     const handleDownload  = () => {
       const link = document.createElement('a');
-      link.href = '/src/file/CV.pdf';
-      link.download = 'CV.pdf';
+      link.href = 'src/file/CV_Wicaksana Adi Saputrp.pdf';
+      link.download = 'CV_Wicaksana Adi Saputro.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -16,9 +16,9 @@ export default function Home() {
       <section className="section">
         <div className="section__container">
           <div className="content">
-            <h1 className="judul">I'm<span> Wicaksana<br />an</span> Informatic Engineering Student</h1>
+            <h1 className="judul">Hii, I'm<span> Wicaksana<br />an</span> Informatic Engineering Student</h1>
             <p className="description">
-            I am an 8th semester student in the informatics engineering study program
+              <IoLocationOutline/> Based in Tanjungpinang, kepulauan Riau, Indonesia
             </p>
             <div className="button">
               <button type="button" className="porto" onClick={handleDownload}>
