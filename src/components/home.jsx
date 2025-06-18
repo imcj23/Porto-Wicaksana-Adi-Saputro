@@ -1,12 +1,12 @@
-import React from 'react';
+// import React from 'react';
 import Image1 from '../assets/pict1.jpg'
 import { IoLocationOutline } from "react-icons/io5";
 
 export default function Home() {
     const handleDownload  = () => {
       const link = document.createElement('a');
-      link.href = 'src/file/CV_Wicaksana Adi Saputrp.pdf';
-      link.download = 'CV_Wicaksana Adi Saputro.pdf';
+      link.href = '/public/CV_Wicaksana_Adi_Saputro.pdf';
+      link.download = 'CV_Wicaksana_Adi_Saputro.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
