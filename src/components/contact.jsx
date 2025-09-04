@@ -1,31 +1,41 @@
-import React, { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "emailjs-com";
+import Notification from "./modal/notification";
 
 export default function Contact() {
-    const form = useRef();
-    const sendEmail = (e) => {
-      e.preventDefault();
+  const form = useRef();
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalType, setModalType] = useState("success"); // success | error
+  const [modalMessage, setModalMessage] = useState("");
 
-      emailjs
-        .sendForm(
-          "service_wicaksana",
-          "template_dlewonc",
-          form.current,
-          "g__lqEokUXzJrhEAG"
-        )
-        .then(
-          (result) => {
-            alert("message sent successfully", result.text);
-            console.log(result.text);
-          },
-          (error) => {
-            alert("message not sent", error.text);
-            console.log(error.text);
-          }
-        );
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-      e.target.reset();
-    };
+    emailjs
+      .sendForm(
+        "service_wicaksana",
+        "template_dlewonc",
+        form.current,
+        "g__lqEokUXzJrhEAG"
+      )
+      .then(
+        (result) => {
+          setModalType("success");
+          setModalMessage("Message sent successfully!");
+          setModalOpen(true);
+          console.log(result.text);
+        },
+        (error) => {
+          setModalType("error");
+          setModalMessage("Message failed to send. Please try again.");
+          setModalOpen(true);
+          console.log(error.text);
+        }
+      );
+
+    e.target.reset();
+  };
+
   return (
     <section className="contact">
       <div className="contact-text">
@@ -41,6 +51,14 @@ export default function Contact() {
         <textarea name="message" required />
         <button type="submit">Send Message</button>
       </form>
+
+      {/* Modal Notifikasi */}
+      <Notification
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+        type={modalType}
+        message={modalMessage}
+      />
     </section>
-  );  
+  );
 }

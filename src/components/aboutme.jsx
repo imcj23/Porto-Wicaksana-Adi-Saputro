@@ -1,11 +1,11 @@
-import Image from "../assets/Wicaksana.png";
+import Image from "../assets/pict1.jpg";
 
 export default function Aboutme() {
   return (
     <>
       <section className="aboutme">
         <div className="aboutme-tag">
-          <h2>About me</h2>
+          <h2>Get To Know Me</h2>
         </div>
         <div className="main">
           <div className="image2">
@@ -13,16 +13,16 @@ export default function Aboutme() {
           </div>
           <div className="about-text">
             <p>
-              Informatics engineering students who are interested in software
-              development, have experience in web development while
-              participating in the government program "Internship and
-              Independent Study Batch 6" and got a role as a coder in 2
-              projects, namely Micro Challenge and Massive Challenge using the
-              React framework and took an internship at PT Kinema Systrans,
-              Research and Development division, I got a role as a system design
-              and testing. And also have experience designing mobile
-              applications using React Native during college. I always want to
-              learn about technology because technology is always evolving
+              I’m Wicaksana Adi Saputro, s student of Information of Technology
+              at the Indonesian Institute of Technology in Tanjungpinang. I’m a
+              Frontend developer with passion for building clean, responsive and
+              user-friendly web interfaces. I enjoy working with modern
+              technologies like React and Tailwind Css to build scalable and
+              maintable UI. I focus on writing clean and efficient code and i
+              love turning UI/UX Design into real, interactive products. I’m
+              always eager to learn new tools and frameworks, and i aspire to
+              contribute to impactful products with great teams. Outside of
+              progamming, I enjoy sport such as Badminton and Martial Art
             </p>
           </div>
         </div>

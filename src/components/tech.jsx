@@ -3,70 +3,58 @@ import Express from "../assets/express.png";
 import Figma from "../assets/figma.png";
 import Github from "../assets/github.png";
 import NodeJs from "../assets/nodejs.png";
-import Php from "../assets/php.png";
 import ReactLogo from "../assets/react.png";
 import Tailwind from "../assets/tailwind.png";
-import JS from "../assets/js.png";
+import VSCode from "../assets/vs code.png";
 
-export default function Experience() {
+export default function TechStack() {
   return (
-    <section className="tech">
-      <div className="container-tools">
-        <div className="tech-text">
-          <h1>Tools</h1>
-          <p>
-            Some of the projects that I make use several technologies for design
-            or development, the technology that I use
-          </p>
+    <section className="tech-stack">
+      <h2 className="title">Tech Stack</h2>
+      <div className="card-container">
+        <div className="stack-card">
+          <h3>Frontend</h3>
+          <div className="stack-card-logo">
+            <div className="logo">
+              <img src={ReactLogo} alt="React" />
+              <h2>React</h2>
+            </div>
+            <div className="logo">
+              <img src={Tailwind} alt="Tailwind" />
+              <h2>Tailwind</h2>
+            </div>
+          </div>
         </div>
-        <div className="container-icon">
-          <div className="icon-tools">
-            <a href="https://help.figma.com/hc/en-us" target="blank">
-              <img src={Figma} alt="" />
-            </a>
-            <h3>Figma</h3>
+
+        <div className="stack-card">
+          <h3>Tools</h3>
+          <div className="stack-card-logo">
+            <div className="logo">
+              <img src={Github} alt="GitHub" />
+              <h2>Github</h2>
+            </div>
+            <div className="logo">
+              <img src={Figma} alt="Figma" />
+              <h2>Figma</h2>
+            </div>
+            <div className="logo">
+              <img src={VSCode} alt="VSCode" />
+              <h2>VSCode</h2>
+            </div>
           </div>
-          <div className="icon-tools">
-            <a href="https://nodejs.org/docs/latest/api/" target="blank">
-              <img src={NodeJs} alt="" />
-            </a>
-            <h3>NodeJs</h3>
-          </div>
-          <div className="icon-tools">
-            <a href="https://docs.github.com/en" target="blank">
-              <img src={Github} alt="" />
-            </a>
-            <h3>Github</h3>
-          </div>
-          <div className="icon-tools">
-            <a href="https://react.dev/" target="blank">
-              <img src={ReactLogo} alt="" />
-            </a>
-            <h3>React</h3>
-          </div>
-          <div className="icon-tools">
-            <a href="https://expressjs.com/" target="blank">
-              <img src={Express} alt="" />
-            </a>
-            <h3>Express js</h3>
-          </div>
-          <div className="icon-tools">
-            <a href="https://tailwindcss.com/" target="blank">
-              <img src={Tailwind} alt="" />
-            </a>
-            <h3>Tailwind Css</h3>
-          </div>
-          <div className="icon-tools">
-            <a href="https://www.php.net/docs.php" target="blank">
-              <img src={Php} alt="" />
-            </a>
-            <h3>Php</h3>
-          </div>
-          <div className="icon-tools">
-            <a href="" target="blank">
-              <img src={JS} alt="" />
-            </a>
-            <h3>Javascript</h3>
+        </div>
+
+        <div className="stack-card">
+          <h3>Backend</h3>
+          <div className="stack-card-logo">
+            <div className="logo">
+              <img src={Express} alt="Express" />
+              <h2>Express JS</h2>
+            </div>
+            <div className="logo">
+              <img src={NodeJs} alt="Node.js" />
+              <h2>Node JS</h2>
+            </div>
           </div>
         </div>
       </div>
