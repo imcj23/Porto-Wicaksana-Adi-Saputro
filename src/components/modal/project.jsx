@@ -1,4 +1,3 @@
-// src/components/modal/ProjectModal.jsx
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function ProjectModal({ isOpen, onClose, project }) {

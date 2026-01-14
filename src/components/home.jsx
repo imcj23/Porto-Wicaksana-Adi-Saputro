@@ -1,5 +1,5 @@
 // import React from 'react';
-import Image1 from "../assets/pict1.jpg";
+import Image1 from "../assets/Wicaksana.png";
 import { IoLocationOutline } from "react-icons/io5";
 
 export default function Home() {
@@ -11,15 +11,6 @@ export default function Home() {
     link.click();
     document.body.removeChild(link);
   }
-  const DownloadPorto = () => {
-    const link = document.createElement('a')
-    link.href = '';
-    link.download = '';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }
-
   return (
     <>
       <section className="section">
@@ -29,15 +20,18 @@ export default function Home() {
               Hii, I'm<span> Wicaksana an</span> <br />
               Informatic Engineering Student
             </h1>
-            <p className="description">
+            <p className="describe">Frontend Developer who is enthusiastic about building attractive and functional web interfaces. I enjoy transforming designs into interactive interfaces with attention to detail, performance, and user experience.</p>
+            <p className="location">
               <IoLocationOutline /> Based in Tanjungpinang, kepulauan Riau,
               Indonesia
             </p> 
           </div>
           <div className="button">
             <button onClick={DownloadCv}>Curriculum Vitae</button>
-            <button onClick={DownloadPorto}>Portofolio</button>
           </div>
+        </div>
+        <div className="section-pict">
+          <img src={Image1} alt="" />
         </div>
       </section>
     </>
