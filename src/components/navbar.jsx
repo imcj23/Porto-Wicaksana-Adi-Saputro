@@ -1,5 +1,5 @@
 import { useState} from "react";
-import ComingSoon from "./modal/ComingSoon";
+import ComingSoon from "./modal/comingsoon";
 // import { icons } from "../utils/icon";
 // import { getTheme, applyTheme } from "../utils/theme";
 import "../App.css";
