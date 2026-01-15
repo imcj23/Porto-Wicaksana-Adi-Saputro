@@ -206,10 +206,6 @@ ul li a:hover {
   background-color: var(--grey-dark-300);
   padding: 10px;
 }
-.aboutme-tag h2:hover{
-  background-color: var(--grey-dark-900);
-  color: var(--grey-dark-200);
-}
 .main {
   display: flex;
   justify-content: space-around;
@@ -238,61 +234,32 @@ ul li a:hover {
   color: var(--text-light);
   margin-bottom: 2rem;
 }
-
-.tech-stack {
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-.title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #2b2548;
-  margin-bottom: 2rem;
-}
-
-.card-container {
+.tech-heading {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-}
-
-.stack-card {
-  border-radius: 10px;
-  border: 7px solid;
-  border-image: linear-gradient(
-    to right,
-    var(--secondary-color),
-    var(--primary-color)
-  );
-  border-image-slice: 1;
-  width: 250px;
-  padding: 1rem;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s;
-}
-.stack-card-logo {
-  display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 0.8rem;
+  margin-top: 24px;
+  margin-bottom: 25px;
 }
-.stack-card:hover {
-  transform: translateY(-5px);
+.tech-heading h2 {
+  font-size: 24px;
+  background-color: var(--grey-dark-300);
+  width: 100px;
+  text-align: center;
+  border-radius: 25px;
+  margin-bottom: 15px;
 }
-
-.stack-card h3 {
-  color: var(--secondary-color);
-  font-weight: 600;
-  margin-bottom: 1rem;
+.skills-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
 }
-
-.stack-card img {
-  max-height: 50px;
-  margin: 0.5rem;
+.skills-img {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media (max-width: 768px) {

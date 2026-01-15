@@ -1,3 +1,4 @@
+import Tech from './tech'
 import Image from "../assets/pict1.jpg";
 
 export default function Aboutme() {
@@ -13,7 +14,7 @@ export default function Aboutme() {
           </div>
           <div className="about-text">
             <p>
-              I am Wicaksana Adi Saputro, an Information Technology student at
+              I'm Wicaksana Adi Saputro, an Information Technology student at
               the Indonesian Institute of Technology in Tanjungpinang. I am a
               frontend developer with a passion for building clean, responsive,
               and user-friendly web interfaces. I enjoy working with modern
@@ -34,6 +35,7 @@ export default function Aboutme() {
             </p>
           </div>
         </div>
+        <Tech/>
       </section>
     </>
   );
