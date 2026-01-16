@@ -115,6 +115,7 @@ ul li a:hover {
 .nav__links button{
   cursor: pointer;
 }
+/* =========================================================== */
 .section {
   max-width: var(--max-width); 
   margin: auto;
@@ -155,7 +156,6 @@ ul li a:hover {
 }
 .button {
   display: flex;
-  /* justify-content: center; */
   gap: 3rem;
 }
 
@@ -262,18 +262,17 @@ ul li a:hover {
   align-items: center;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    /* flex-direction: column; */
     align-items: center;
   }
 
   .stack-card {
     width: 90%;
   }
-}
+} */
 
 .contact {
   max-width: var(--max-width);
@@ -358,14 +357,21 @@ ul li a:hover {
   align-items: center;
   gap: 1.5rem;
 }
-@media (width < 768px) {
-  .menu-toggle {
+
+.text-project {
+  margin-bottom: 26px;
+}
+
+@media (max-width: 420px) {
+  .nav_content {
+    padding: 0.75rem 1rem;
+  }
+    .menu-toggle {
     display: block;
   }
-
   .nav__links {
     flex-direction: column;
-    background: linear-gradient(to right, #8e0d3c 10%, #1d1842 100%);
+    background: var(--primary-color-dark);
     position: absolute;
     top: 70px;
     left: 0;
@@ -382,13 +388,139 @@ ul li a:hover {
     margin-bottom: 1rem;
   }
 
-  .section__container {
-    padding: 10rem 1rem 5rem 1rem;
-    text-align: center;
-    grid-template-columns: repeat(1, 1fr);
+  .section {
+    flex-direction: column-reverse; /* gambar di atas, teks di bawah */
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    padding: 2rem 1rem;
+    min-height: auto;
+    gap: 2rem;
+    margin-bottom: 100px;
   }
 
-  .image {
+  .section_container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .judul {
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+  }
+
+  .describe {
+    font-size: 0.8rem;
+    text-align: justify;
+  }
+
+  .location {
+    justify-content: center;
+    font-size: 0.7rem;
+  }
+
+  .button {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .button button {
+    width: 100%;
+    max-width: 200px;
+    padding: 0.7rem 1.5rem;
+  }
+
+  .section-pict img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .aboutme {
+    padding: 2rem 1rem;
+  }
+
+  .aboutme-tag h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .image2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .image2 img {
+    width: 220px;
+    height: auto;
+    border-radius: 16px;
+  }
+
+  .about-text {
+    width: 100%;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.6rem;
+    text-align: justify;
+  }
+  
+  .tech-container {
+    padding: 2rem 1rem;
+  }
+
+  .tech-heading h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .tech-heading p {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  .tech-skills {
+    display: flex;
+    justify-content: center;
+  }
+
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .skills-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .skills-img img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+  }
+
+  .skills-img h3 {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  /* .image {
     grid-area: 1/1/2/2;
   }
   .image2 {
@@ -415,9 +547,5 @@ ul li a:hover {
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
     padding: 10px;
-  }
-}
-
-.text-project {
-  margin-bottom: 26px;
+  } */
 }

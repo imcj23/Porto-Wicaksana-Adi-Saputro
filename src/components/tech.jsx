@@ -18,7 +18,7 @@ export default function TechStack() {
           <p>The skills, tools and technology I use to create a project</p>
         </div>
         <div className="tech-skill">
-          <div className="tech skills">
+          <div className="tech-skills">
             <div className="skills-container">
               <div className="skills-img">
                 <img src={Js} alt="JavaScript" />
