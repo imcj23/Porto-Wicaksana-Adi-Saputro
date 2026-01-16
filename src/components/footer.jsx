@@ -1,16 +1,33 @@
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { useState } from 'react'
+import EmailModal from '../components/modalEmail'
+import '../App.css'
 
-export default function Footer() {
+export default function Footer () {
+  const [open,setOpen] = useState(false)
+
   return (
-    <section className="footer">
-      <footer>
-        <p>&copy; {new Date().getFullYear()} Wicaksana. All rights reserved.</p>
-        <div className="footer-logo">
-            <a href="https://github.com/imcj23" target='blank'><FaGithub /></a>
-            <a href="https://linkedin.com/in/wicaksanaadisaputro" target='blank'><FaLinkedin /></a>
-            <a href="https://www.instagram.com/wicaksana_as?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target='blank'><FaInstagram /></a>
+    <footer className="footer">
+      <div className="footer-container">
+        <h3>Wicaksana Adi Saputro</h3>
+        <p>Frontend Developer • React • UI/UX</p>
+
+        <div className="footer-social">
+          <a href="https://github.com/imcj23" target="_blank">
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/wicaksanaadisaputro/" target="_blank">
+            LinkedIn
+          </a>
+          <button onClick={()=> setOpen(true)}>
+            Email
+          </button>
         </div>
-      </footer>
-    </section>
-  );
+
+        <span className="footer-copy">
+          © {new Date().getFullYear()} All rights reserved.
+        </span>
+      </div>
+      {open && <EmailModal onClose={() => setOpen(false)} />}
+    </footer>
+  )
 }

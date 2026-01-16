@@ -262,104 +262,336 @@ ul li a:hover {
   align-items: center;
 }
 
-/* @media (max-width: 768px) {
-  .card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    align-items: center;
-  }
-
-  .stack-card {
-    width: 90%;
-  }
-} */
-
-.contact {
-  max-width: var(--max-width);
-  height: 80vh;
+.experience {
+  padding: 4rem 1rem;
+  max-width: 1100px;
   margin: auto;
-  padding: 5rem;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
 }
-.contact-text {
+
+.experience-tag{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.experience-title {
   text-align: center;
-  margin-bottom: -10rem;
+  width: 200px;
+  padding: 8px;
+  background-color: var(--grey-dark-300);
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  border-radius: 25px;
 }
-.contact-text h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: var(--text-dark);
+
+.experience-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.experience-card {
+  border: 2px solid var(--grey-dark-300);
+  padding: 1.8rem;
+  border-radius: 16px;
+  transition: 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.experience-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   margin-bottom: 1rem;
 }
-.contact-text p {
-  font-size: 1.2rem;
-  color: var(--text-light);
-  margin-bottom: 2rem;
+
+.experience-header img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: white;
+  padding: 4px;
 }
-.contact form {
+
+.experience-card h3 {
+  font-size: 1.2rem;
+}
+
+.company {
+  display: block;
+  font-weight: 600;
+}
+
+.period {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-top: 2px;
+}
+
+.experience-card p {
+  font-size: 0.95rem;
+  line-height: 1.6rem;
+}
+
+.projects {
+  padding: 4rem 1rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.projects-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.project-card {
+  /* background: var(--grey-dark-900); */
+  border: 2px solid var(--grey-dark-300);
+  padding: 10px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 1.2rem;
+}
+.project-content h3{
+  font-weight: 600;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: var(--grey-dark-900);
+  max-width: 600px;
+  width: 90%;
+  border-radius: 16px;
+  padding: 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-content img {
+  width: 90%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.modal-content h3 {
+  color: var(--grey-dark-300);
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.modal-content p {
+  color: var(--grey-dark-300);
+  font-size: 0.95rem;
+  line-height: 1.6rem;
+}
+
+.modal-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.modal-tech span {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  background: var(--grey-dark-300);
+  border-radius: 8px;
+}
+
+.modal-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.modal-links a {
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  background: var(--grey-dark-300);
+  font-weight: 600;
+}
+.modal-links a:hover {
+  background-color: var(--grey-dark-900);
+  border: 1px solid var(--grey-dark-300);
+  color: var(--grey-dark-300);
+  transition: 0.3s;
+}
+
+.modal-close {
+  position: absolute;
+  color: var(--grey-dark-200);
+  top: 10px;
+  right: 12px;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.footer {
+  /* background: var(--grey-dark-900); */
+  border-top: 2px solid var(--grey-dark-400);
+  padding: 3rem 1rem;
+  margin-top: 4rem;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-container h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.footer-container p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-social a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  color: var(--extra-light);
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+.footer-social button {
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.email-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.email-modal {
+  background: var(--grey-dark-900);
+  color: var(--grey-dark-200);
+  width: 100%;
+  max-width: 420px;
+  padding: 1.5rem;
+  border-radius: 16px;
+  position: relative;
+}
+
+.email-modal h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.email-modal form {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
 }
-.contact form label {
-  font-size: 1rem;
-  font-weight: bold;
-  color: var(--text-dark);
+.email-modal label {
+  font-weight: 600;
 }
-.contact form input,
-.contact form textarea {
-  padding: 0.5rem;
-  border: 3px solid var(--primary-color);
-  border-radius: 10px;
+.email-modal input,
+.email-modal textarea {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid var(--grey-dark-200);
   outline: none;
-  font-size: 1rem;
-}
-.contact form input:focus,
-.contact form textarea:focus {
-  border: 3px solid var(--secondary-color);
-}
-.contact form button {
-  background-color: var(--primary-color);
-  color: #ffffff;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 0.5rem;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-}
-.contact form button:hover {
-  background-color: var(--secondary-color);
-  transition: 0.3s;
-}
-.footer {
-  background: linear-gradient(to right, #8e0d3c 10%, #1d1842 100%);
-  color: var(--extra-light);
-  padding: 2rem;
-  text-align: center;
-}
-.footer p {
-  font-size: 1rem;
-  color: var(--extra-light);
-  margin-bottom: 10px;
-}
-.footer a {
-  font-size: 2rem;
-  color: var(--extra-light);
-  font-weight: bold;
-  margin: 15px;
-  display: flex;
-}
-.footer-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
 }
 
-.text-project {
-  margin-bottom: 26px;
+.email-modal button {
+  padding: 0.6rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: var(--grey-dark-200);
+  color: var(--grey-dark-900);
+}
+.email-modal button:hover{
+  background-color: var(--grey-dark-900);
+  color: var(--grey-dark-300);
+  border: 1px solid var(--grey-dark-300);
+  transition: 0.5s;
+}
+
+.email-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 @media (max-width: 420px) {
@@ -394,7 +626,7 @@ ul li a:hover {
     align-items: center;
     margin-top: 100px;
     padding: 2rem 1rem;
-    min-height: auto;
+    min-height: 0;
     gap: 2rem;
     margin-bottom: 100px;
   }
@@ -519,33 +751,22 @@ ul li a:hover {
     font-size: 0.85rem;
     text-align: center;
   }
+  .experience-container {
+    grid-template-columns: 1fr;
+  }
 
-  /* .image {
-    grid-area: 1/1/2/2;
+  .experience-title {
+    font-size: 1.8rem;
   }
-  .image2 {
-    margin-bottom: 30px;
+  .projects-container {
+    grid-template-columns: 1fr;
   }
-  .button {
-    margin: auto;
-  }
-  .about-text {
+
+  .modal-content {
     padding: 1rem;
   }
-  .main {
-    padding: 10rem 1rem 5rem 1rem;
-    text-align: center;
-    grid-template-columns: repeat(1, 1fr);
-  }
+  .email-overlay{
+    padding: 1.2rem;
 
-  .about-text p {
-    text-align: justify;
-    text-indent: 50px;
   }
-  .container-icon {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    place-items: center;
-    padding: 10px;
-  } */
 }
